@@ -1,8 +1,10 @@
 # ZO 论坛盒子 2.2.7
 
-> **本项目版权归 ZO论坛(www.zozse.cn、www.z19m.com)所有。版权归 ZO论坛所有。**
+> **本项目版权归 ZO论坛所有。**
 >
-> 官网：[www.zozse.cn](https://www.zozse.cn) · [www.z19m.com](https://www.z19m.com)
+> 官网一：[www.zozse.cn](https://www.zozse.cn/)
+>
+> 官网二：[www.z19m.com](https://www.z19m.com/)
 >
 > 本项目自行编写的代码按 [MIT](LICENSE) 授权，允许使用、修改、商用和闭源衍生，分发时须保留版权和许可声明；MIT 不要求公开衍生源码。相较 Apache-2.0，MIT 更简洁但没有同样的明确专利授权条款；相较 GPL-3.0，MIT 不要求衍生作品采用相同许可证。第三方组件、品牌、图标、论坛内容和商业插件仍适用其各自权利及许可，见 [第三方声明](THIRD_PARTY_NOTICES.md)。软件按现状提供，不提供适销性、特定用途适用性等保证，责任限制以 LICENSE 为准。
 
@@ -502,4 +504,5 @@ Linux 独立读取 `https://www.z19m.com/download/desktop/latest-linux.yml`，�
 ## 开源复核补充
 
 接口与环境配置见 [API.md](API.md)，本次检查及人工确认事项见 [OPEN_SOURCE_CHECKLIST.md](OPEN_SOURCE_CHECKLIST.md)。
+
 
