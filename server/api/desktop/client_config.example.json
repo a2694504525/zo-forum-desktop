@@ -1,0 +1,100 @@
+{
+    "app": {
+        "name": "ZO论坛盒子",
+        "site_url": "https://www.zozse.cn",
+        "api_base": "https://www.zozse.cn/api/desktop",
+        "image_cdn": "https://tp.zozse.cn",
+        "download_url": "https://www.z19m.com/download/desktop"
+    },
+    "auth": {
+        "sms_enabled": false,
+        "sms_register_enabled": true,
+        "sms_login_enabled": true,
+        "sms_reset_enabled": true,
+        "sms_bind_enabled": true,
+        "sms_login_modes": [
+            "code"
+        ],
+        "bind_mobile_required": false,
+        "password_login_enabled": true,
+        "captcha_enabled": false,
+        "login_enabled": true,
+        "register_enabled": true,
+        "qq_login_enabled": true,
+        "disabled_message": ""
+    },
+    "features": {
+        "sign_in_enabled": true,
+        "medals_enabled": true,
+        "tasks_enabled": true,
+        "profile_save_enabled": true,
+        "reply_enabled": true,
+        "download_enabled": true,
+        "theme_enabled": true,
+        "tray_enabled": true,
+        "dark_mode_enabled": true,
+        "search_enabled": true,
+        "ai_search_enabled": true,
+        "notifications_enabled": true,
+        "posting_enabled": true
+    },
+    "navigation": {
+        "items": [],
+        "order": [
+            "home",
+            "forums",
+            "search",
+            "ai-search",
+            "notifications",
+            "profile",
+            "settings"
+        ]
+    },
+    "theme": {
+        "default": "blue",
+        "available": [
+            "blue",
+            "purple",
+            "green",
+            "orange"
+        ],
+        "allow_user_change": true,
+        "appearance": "system"
+    },
+    "run_state": {
+        "mode": "normal",
+        "can_run": true,
+        "action": "notice",
+        "message": "",
+        "close_reason": "",
+        "resume_at": "",
+        "link": "",
+        "check_interval": 600
+    },
+    "announcements": [],
+    "home_notices": [],
+    "floating_notices": [],
+    "update": {
+        "check_interval": 10800,
+        "force_min_version": "2.0.0",
+        "changelog": []
+    },
+    "latest_version": "2.2.4",
+    "minimum_version": "2.0.0",
+    "client_enabled": true,
+    "maintenance_message": "",
+    "download_url": "https://www.z19m.com/",
+    "update_feed_url": "https://www.z19m.com/download/desktop",
+    "force_update": false,
+    "check_interval_minutes": 180,
+    "control_poll_seconds": 2,
+    "changelog": [],
+    "announcement": {
+        "enabled": false,
+        "id": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "link": ""
+    }
+}

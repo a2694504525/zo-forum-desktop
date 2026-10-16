@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https: data:;">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ZO论坛盒子 - 登录</title>
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="ios.css">
+</head>
+<body>
+    <header class="auth-titlebar">
+        <div class="auth-brand"><span>ZO</span> ZO论坛盒子</div>
+        <div class="auth-window-actions">
+            <button id="btnMin" title="最小化">—</button>
+            <button id="btnClose" title="关闭">×</button>
+        </div>
+    </header>
+
+    <main class="auth-shell">
+        <section class="welcome">
+            <div class="welcome-logo">ZO</div>
+            <h1>欢迎回来</h1>
+            <p>登录后进入 ZO论坛盒子</p>
+        </section>
+
+        <section id="sessionCard" class="session-card hidden">
+            <div><small>检测到已登录账号</small><strong id="sessionUsername"></strong></div>
+            <div class="session-actions">
+                <button id="continueButton" class="primary small">继续进入</button>
+                <button id="switchAccountButton" class="ghost small">切换账号</button>
+            </div>
+        </section>
+
+        <section class="auth-card">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">登录</button>
+                <button class="auth-tab" data-tab="register">注册</button>
+            </div>
+            <div id="loginPanel" class="auth-panel active">
+                <input id="loginUsername" autocomplete="username" placeholder="用户名或手机号">
+                <input id="loginPassword" type="password" autocomplete="current-password" placeholder="密码">
+                <button id="loginSubmit" class="primary">登录并进入</button>
+            </div>
+            <div id="registerPanel" class="auth-panel">
+                <input id="regUsername" minlength="3" maxlength="15" autocomplete="username" placeholder="用户名（3-15个字符）">
+                <input id="regEmail" type="email" maxlength="120" autocomplete="email" placeholder="常用邮箱">
+                <input id="regPassword" type="password" minlength="8" maxlength="64" autocomplete="new-password" placeholder="密码（至少8位，包含字母和数字）">
+                <input id="regPasswordConfirm" type="password" minlength="8" maxlength="64" autocomplete="new-password" placeholder="再次输入密码">
+                <label class="agreement"><input id="regAgreement" type="checkbox"><span>我已阅读并同意论坛用户协议和隐私规则</span></label>
+                <button id="registerSubmit" class="primary">注册并进入</button>
+            </div>
+            <p id="authMessage" class="auth-message"></p>
+        </section>
+
+        <section class="announcement-card">
+            <div class="announcement-head"><strong id="announcementTitle">客户端公告</strong><span id="versionText">v--</span></div>
+            <p id="announcementContent">正在读取公告...</p>
+            <div class="announcement-foot"><span id="updateText">正在检查版本...</span><button id="announcementLink" class="text-button hidden">查看详情</button></div>
+        </section>
+    </main>
+    <script src="vendor/purify.min.js"></script>
+    <script src="dynamic-ui.js"></script><script src="runtime.js"></script>
+    <script src="post-renderer.js"></script>
+    <script src="account-forms.js"></script>
+    <script src="api.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="sms-auth.js"></script>
+</body>
+</html>

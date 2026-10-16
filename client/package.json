@@ -1,0 +1,75 @@
+{
+  "name": "zo-forum-desktop",
+  "version": "2.2.7",
+  "description": "ZO论坛桌面客户端",
+  "author": "ZO Forum",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "set ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/&&set ELECTRON_BUILDER_BINARIES_MIRROR=https://npmmirror.com/mirrors/electron-builder-binaries/&&electron-builder --win",
+    "test": "node --test tests/*.test.cjs",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux dir --x64 --config.directories.output=dist-linux",
+    "package:linux": "python3 scripts/package-linux.py"
+  },
+  "devDependencies": {
+    "electron": "43.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "electronDownload": {
+    "mirror": "https://npmmirror.com/mirrors/electron/"
+  },
+  "electronBuilderBinariesMirror": "https://npmmirror.com/mirrors/electron-builder-binaries/",
+  "build": {
+    "appId": "cn.zozse.forum.desktop",
+    "productName": "ZO论坛盒子",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "node_modules/**/*",
+      "security.js",
+      "config-schema.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "renderer/assets/icon-256.ico",
+      "publisherName": null,
+      "verifyUpdateCodeSignature": false
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://www.z19m.com/download/desktop"
+      }
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "renderer/assets/icon-256.ico",
+      "uninstallerIcon": "renderer/assets/icon-256.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": false
+    },
+    "artifactName": "ZO-Forum-Setup-${version}.${ext}",
+    "linux": {
+      "target": [
+        "dir"
+      ],
+      "icon": "renderer/assets/icon.png",
+      "category": "Network",
+      "executableName": "zo-forum-desktop",
+      "artifactName": "ZO-Forum-${version}-linux-${arch}.${ext}"
+    }
+  },
+  "dependencies": {
+    "dompurify": "3.4.17",
+    "electron-log": "5.4.4",
+    "electron-updater": "^6.6.2"
+  },
+  "license": "MIT"
+}

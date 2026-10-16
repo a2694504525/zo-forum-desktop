@@ -1,0 +1,12 @@
+import {apiHome} from './api-home.js';
+import {apiForums} from './api-forums.js';
+import {apiThread} from './api-thread.js';
+import {apiPost} from './api-post.js';
+import {apiSearch} from './api-search.js';
+import {apiSms} from './api-sms.js';
+import {apiSettings} from './api-settings.js';
+import {apiUser} from './api-user.js';
+import {apiAuth} from './api-auth.js';
+import {apiNotifications} from './api-notifications.js';
+import {apiProfile} from './api-profile.js';
+Object.assign(API,apiHome,apiForums,apiThread,apiPost,apiSearch,apiSms,apiSettings,apiUser,apiAuth,apiNotifications,apiProfile);

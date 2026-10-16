@@ -1,0 +1,48 @@
+:root { color-scheme:light; --bg:#f5f7fb; --card:#fff; --input:#fff; --text:#172033; --muted:#65748a; --accent:#2563eb; --danger:#dc2626; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height:100vh; background:linear-gradient(145deg,#eef4ff,#f8faff 48%,#f4f6fa); color:var(--text); font-family:"Microsoft YaHei",system-ui,sans-serif; overflow:auto; }
+button,input { font:inherit; }
+.hidden { display:none !important; }
+.auth-titlebar { height:40px; display:flex; align-items:center; justify-content:space-between; padding-left:14px; background:#fff; -webkit-app-region:drag; border-bottom:1px solid #e4e9f2; }
+.auth-brand { display:flex; align-items:center; gap:9px; font-size:13px; font-weight:700; }
+.auth-brand span,.welcome-logo { display:grid; place-items:center; background:linear-gradient(135deg,#3b82f6,#8b5cf6); color:white; box-shadow:0 8px 25px rgba(79,124,255,.3); }
+.auth-brand span { width:25px; height:25px; border-radius:7px; font-size:11px; }
+.auth-window-actions { display:flex; height:100%; -webkit-app-region:no-drag; }
+.auth-window-actions button { width:46px; border:0; color:#65748a; background:transparent; cursor:pointer; }
+.auth-window-actions button:hover { background:#eef2f7; color:#172033; }
+#btnClose:hover { background:#dc2626; }
+.auth-shell { width:min(440px,calc(100% - 36px)); margin:0 auto; padding:24px 0 30px; }
+.welcome { text-align:center; margin-bottom:18px; }
+.welcome-logo { width:54px; height:54px; margin:0 auto 12px; border-radius:16px; font-weight:800; }
+.welcome h1 { font-size:24px; margin-bottom:5px; }
+.welcome p,.announcement-card p { color:var(--muted); font-size:13px; line-height:1.65; }
+.auth-card,.announcement-card,.session-card { border:1px solid #e3e8f1; background:#fff; border-radius:16px; box-shadow:0 14px 38px rgba(37,55,88,.1); }
+.auth-card { padding:18px; }
+.auth-tabs { display:flex; gap:8px; margin-bottom:15px; }
+.auth-tab { flex:1; padding:10px; border:0; border-radius:9px; color:var(--muted); background:#f1f4f8; cursor:pointer; }
+.auth-tab.active { color:white; background:linear-gradient(135deg,#3b82f6,#8b5cf6); }
+.auth-panel { display:none; flex-direction:column; gap:11px; }
+.auth-panel.active { display:flex; }
+.auth-panel input { width:100%; padding:12px 13px; border:1px solid #dbe2ec; border-radius:9px; outline:0; background:var(--input); color:var(--text); }
+.auth-panel input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(79,124,255,.13); }
+.primary,.ghost { border:0; border-radius:9px; padding:12px 14px; color:white; cursor:pointer; font-weight:700; }
+.primary { background:linear-gradient(135deg,#3b82f6,#8b5cf6); }
+.ghost { background:rgba(255,255,255,.07); }
+.primary:disabled { opacity:.55; cursor:not-allowed; }
+.small { padding:8px 11px; font-size:12px; }
+.agreement { display:flex; align-items:flex-start; gap:8px; color:var(--muted); font-size:12px; line-height:1.5; cursor:pointer; }
+.agreement input { width:15px; margin-top:2px; }
+.auth-message { min-height:20px; margin-top:11px; text-align:center; color:var(--muted); font-size:12px; }
+.auth-message.error { color:var(--danger); }
+.auth-message.success { color:#4ade80; }
+.session-card { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 14px; margin-bottom:12px; }
+.session-card small { display:block; color:var(--muted); margin-bottom:3px; }
+.session-card strong { font-size:14px; }
+.session-actions { display:flex; gap:7px; }
+.announcement-card { margin-top:13px; padding:15px 16px; }
+.announcement-head,.announcement-foot { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.announcement-head { margin-bottom:8px; }
+.announcement-head span,.announcement-foot { color:var(--muted); font-size:12px; }
+.announcement-foot { margin-top:10px; }
+.text-button { border:0; color:#7da4ff; background:transparent; cursor:pointer; }
+@media (max-height:680px) { .auth-shell{padding-top:14px}.welcome{margin-bottom:12px}.welcome-logo{width:42px;height:42px;margin-bottom:7px}.announcement-card{padding:12px}.auth-card{padding:15px} }
