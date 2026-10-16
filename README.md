@@ -23,9 +23,17 @@
 
 **本项目版权归 ZO论坛所有。**
 
+[查看手机 App 开源项目](https://github.com/a2694504525/zo-forum-app)
+
 </div>
 
 ---
+
+## 相关开源项目
+
+**[手机 App 开源项目](https://github.com/a2694504525/zo-forum-app)**  
+基于 uni-app、Vue 3 与 Pinia，包含手机客户端及配套 app_api 后台接口。
+
 
 ## 开始使用
 
